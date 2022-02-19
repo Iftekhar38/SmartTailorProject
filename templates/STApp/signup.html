@@ -1,0 +1,18 @@
+{% extends "STApp/base.html" %}
+
+{% block content %}
+
+
+<div style="max-width: 1000px; margin: auto; border: 5px outset grey; border-radius: 25px; text-align: center;">
+    <h1>Sign Up<h1>
+<form method="POST">
+    <table>
+        {{form.as_table}}
+        {% csrf_token %}
+    </table>
+    <input type="submit" class='btn btn-primary' value='SignUp' >
+   <a href="{% url 'index' %}" class="btn btn-danger">Cancel</a>
+</form>
+</div>
+{% endblock  %}
+

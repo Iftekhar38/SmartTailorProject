@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/ind.css' %}">
+        
+        <title>SmartTailor</title>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+</head>
+
+    <body>
+        
+        <table width="100%">
+              
+            <tr>
+                
+                <th colspan="2" style="background-color: black; text-align: center; padding:10px; font-family: 'Agency FB';font-size: 80px;color: #DAA520;">
+                    
+                    <img src="{% static 'images/logo.png' %}" height="100" width="150">Smart Tailor</th>
+            </tr>
+            <tr>
+                <th>
+                
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-primary nav justify-content-center">
+                        
+                       
+                          <ul class="navbar-nav">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'galary' %}">Galary</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="/accounts/login/">Login</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                              </li>
+
+                              <li class="nav-item">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+                              </li>
+                            
+                          </ul>
+                        
+                      </nav>
+                    
+                    
+                 </th>
+                </tr>
+            <tr>
+                <th colspan="2">
+                    {% block content %}
+                                        
+                              
+
+                    {% endblock %}
+                </th>
+       
+            </tr>
+            <tr>
+            </div>
+            <th style="background-color: #BFC9CA;">
+                    <div class="row mg-right-0 section-darkbg">
+                        <div class="container text-center">
+                            <div class="col-sm-12">
+                                <h2 class="tt-heading-color">Short on time?</h2>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-sm-12 mt30 mb60">
+                                <svg id="Layer_1" style="width: 70%;" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 584.57 32.61"><defs><style>.cls-1{fill:none;stroke:#a6530b;stroke-miterlimit:10;stroke-width:2px;}.cls-2{font-size:25px;fill:#a6530b;font-family:NotoSerif BoldItalic;font-weight:700;font-style:italic;}.cls-3{white-space:pre;}</style></defs><title>VectorSmartObject_bcaf8a87-5f61-43d6-a450-ac1ecf4dfbf4</title><line class="cls-1" x1="20.03" y1="5.25" x2="49.55" y2="5.25"/><line class="cls-1" x1="20.03" y1="25.47" x2="42.22" y2="25.47"/><line class="cls-1" y1="15.53" x2="38.97" y2="15.53"/><line class="cls-1" x1="566.01" y1="25.47" x2="538.66" y2="25.47"/><line class="cls-1" x1="566.01" y1="5.25" x2="545.46" y2="5.25"/><line class="cls-1" x1="584.57" y1="15.19" x2="548.46" y2="15.19"/><text class="cls-2" transform="translate(105.84 25.11)"><tspan class="cls-3"> 72 HOURS EXPRESS DELIVERY</tspan></text></svg>
+                                <br>
+                                <br>
+                                <br>
+                                <p class="mt30">(Extra charges will apply)</p>
+                            </div>
+                
+                
+                
+                        </div>
+                    </div
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" style="background-color: #808080; text-align: center; padding:10px; color:white;">
+                    <h1>Contact Us<h1>
+                    <h3>D.B Road, Near Alok Paneer,<br> Saharsa (Bihar), 852201</h3>
+                    <h2>Call: 8862867998, 9386077461</h2>
+                </th>
+            <tr>
+                <th colspan="2" style="background-color: black; text-align: center; padding:10px; color:#DAA520;">@iftekhar 2022</th>
+            </tr>
+        
+        <table>
+    </body>
+</html>

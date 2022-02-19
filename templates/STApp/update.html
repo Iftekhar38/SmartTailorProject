@@ -1,0 +1,31 @@
+{% extends 'STApp/base.html' %}
+
+{% block content %}
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!..... </strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+{% endfor %}
+
+{% endif %}
+
+<div style="max-width: 900px; margin: auto; border: 5px outset grey; border-radius: 25px; text-align: center;">
+    <h1>Update Product<h1>
+<form method="POST" enctype="multipart/form-data">
+    <table>
+        {{form.as_table}}
+        {% csrf_token %}
+        
+    </table>
+    <input type="submit" class = 'btn btn-success' value="Update">
+    <input class="btn btn-warning" type="reset" value="Reset">
+    <a href="{% url 'index' %}" class="btn btn-danger">Cancel</a>
+</form>
+
+{% endblock  %}
+
+

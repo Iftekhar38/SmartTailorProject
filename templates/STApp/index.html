@@ -1,0 +1,123 @@
+{% extends 'STApp/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Styles -->	
+<style>
+  .example1 {
+   height: 50px;	
+   overflow: hidden;
+   position: relative;
+  }
+  .example1 h3 {
+   font-size: 2em;
+   color: red;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   line-height: 50px;
+   text-align: center;
+   /* Starting position */
+   -moz-transform:translateX(100%);
+   -webkit-transform:translateX(100%);	
+   transform:translateX(100%);
+   /* Apply animation to this element */	
+   -moz-animation: example1 15s linear infinite;
+   -webkit-animation: example1 15s linear infinite;
+   animation: example1 15s linear infinite;
+  }
+  /* Move it (define the animation) */
+  @-moz-keyframes example1 {
+   0%   { -moz-transform: translateX(100%); }
+   100% { -moz-transform: translateX(-100%); }
+  }
+  @-webkit-keyframes example1 {
+   0%   { -webkit-transform: translateX(100%); }
+   100% { -webkit-transform: translateX(-100%); }
+  }
+  @keyframes example1 {
+   0%   { 
+   -moz-transform: translateX(100%); /* Firefox bug fix */
+   -webkit-transform: translateX(100%); /* Firefox bug fix */
+   transform: translateX(100%); 		
+   }
+   100% { 
+   -moz-transform: translateX(-100%); /* Firefox bug fix */
+   -webkit-transform: translateX(-100%); /* Firefox bug fix */
+   transform: translateX(-100%); 
+   }
+  }
+  </style>
+  
+  <!-- HTML -->	
+  <div class="example1">
+  <h3>30% Discount for all Cloths on Marriage Season call us: 8862867998, 9386077461 or Vist our Tailor</h3>
+  </div>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <img src="{% static 'images/img1.jpeg' %}"  height="600" width="600" alt="" class="no-border" />
+      </div>
+      <div class="col order-first">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-l">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title">Custom tailoring at your doorstep</h1>
+                <p class="card-text">Our highly trained tailors and on time delivery ensure that you get your garment stitched exactly the way you want it and when you want it.</p>
+                <p align="center"><a href="{% url 'contact' %}" class="btn btn-primary">GET IN TOUCH</a><p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col order-last">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-l">
+            <div class="card">
+              <div class="card-body">
+                <h1 class="card-title" align="center">Men's Tailoring</h1>
+                <ul id="menu">
+                  <li>|&nbsp;&nbsp; Suits &nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Shirts&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Pants&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Waistcoats&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Nehru Jackets&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Kurta-Pyjama&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Blazers&nbsp;&nbsp;</li>
+                  <li>|&nbsp;&nbsp; Coats&nbsp;&nbsp;|</li>
+                </ul> 
+  
+                <p align="center"><a href="{% url 'galary' %}" class="btn btn-primary">TRENDING STYLE</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col order-first">
+        <img src="{% static 'images/Banner-Image_Large_Men.png' %}" alt="" class="no-border" />
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+
+{% endblock%}
+
