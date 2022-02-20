@@ -19,6 +19,9 @@ from STApp import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.views.static import serve
+from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
@@ -32,8 +35,10 @@ urlpatterns = [
     path('logout/', views.logout, name="logout"),
     path('viewproduct/', views.viewProduct, name='viewproduct'),
     re_path(r'^update/(?P<id>\d+)/$', views.updateproduct, name="update"),
-    re_path(r'^delete/(?P<id>\d+)/$', views.deleteproduct, name="delete")
-    
+    re_path(r'^delete/(?P<id>\d+)/$', views.deleteproduct, name="delete"),
+    url(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),     
+
 ]
 
 
