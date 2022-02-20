@@ -24,9 +24,9 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = 'v9m6^l2_l9)&n+f$1i%tmvaatcp!kmbkagx62)yoq@yqps#2)r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'smarttailor.herokuapp.com']
+ALLOWED_HOSTS = ['smarttailor.herokuapp.com']
 
 
 # Application definition
